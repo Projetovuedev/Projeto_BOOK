@@ -10,6 +10,7 @@ const produtos = ref([
     preco: 23.24,
     capa: '/public/97819821858242.png',
     quantidade: 1,
+    favoritar: false,
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const produtos = ref([
     preco: 23.24,
     capa: '/public/97819821858242(1).png',
     quantidade: 1,
+    favoritar: false,
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const produtos = ref([
     preco: 13.94,
     capa: '/public/97819821858242(2).png',
     quantidade: 1,
+    favoritar: false,
   },
   {
     id: 4,
@@ -37,6 +40,7 @@ const produtos = ref([
     preco: 16.84,
     capa: '/public/97819821858242(3).png',
     quantidade: 1,
+    favoritar: false,
   },
   {
     id: 5,
@@ -46,6 +50,7 @@ const produtos = ref([
     preco: 26.92,
     capa: '/public/97819821858242(4).png',
     quantidade: 1,
+    favoritar: false,
   },
   {
     id: 6,
@@ -55,6 +60,7 @@ const produtos = ref([
     preco: 13.95,
     capa: '/public/97819821858242(5).png',
     quantidade: 1,
+    favoritar: false,
   },
   {
     id: 7,
@@ -64,6 +70,7 @@ const produtos = ref([
     preco: 26.04,
     capa: '/public/97819821858242(6).png',
     quantidade: 1,
+    favoritar: false,
   },
   {
     id: 8,
@@ -73,6 +80,7 @@ const produtos = ref([
     preco: 15.81,
     capa: '/public/97819821858242(7).png',
     quantidade: 1,
+    favoritar: false,
   },
 
 
@@ -186,8 +194,8 @@ for (let items of produtos.value) {
               <img :src="book.capa" :alt="book.titulo">
               <h3>{{ book.titulo }}</h3>
               <p>{{ book.autor }}</p>
-              <p>{{ book.preco }} <span @click="book.booleano = !book.booleano"
-                  :class="book.booleano ? 'fa-solid fa-heart' : 'fa-regular fa-heart'"></span></p>
+              <p>{{ book.preco }} <span @click="book.favoritar = !book.favoritar"
+                  :class="book.favoritar ? 'fa-solid fa-heart' : 'fa-regular fa-heart'"></span></p>
               <button @click="book.booleano = !book.booleano; book.quantidade = 1"><span
                   class="fa-solid fa-cart-shopping"></span>Comprar</button>
             </div>
@@ -238,7 +246,7 @@ for (let items of produtos.value) {
           </div>
         </div>
         <div class="voltar">
-          <a href="index.html"><button>Voltar para loja</button></a>
+          <button @click="carrinho = !carrinho">Voltar para loja</button>
         </div>
         <section class="finalizacao">
           <div>
@@ -549,6 +557,10 @@ section.primeira div p:last-child {
   color: #27AE60;
 
 }
+.four div p:last-of-type span:hover{
+  cursor: pointer;
+}
+
 
 .four div button {
   color: #FFFFFF;
@@ -559,10 +571,14 @@ section.primeira div p:last-child {
   border: none;
   margin-bottom: 5vw;
 }
+.four div button:hover{
+  cursor: pointer;
+}
 
 .four div button span {
   padding-right: 10px;
 }
+
 
 
 
