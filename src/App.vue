@@ -8,7 +8,7 @@ const produtos = ref([
     autor: 'Cassandra Clare',
     booleano: false,
     preco: 23.24,
-    capa: '/public/97819821858242.png',
+    capa: '/97819821858242.png',
     quantidade: 1,
     favoritar: false,
   },
@@ -18,7 +18,7 @@ const produtos = ref([
     autor: 'Cassandra Clare',
     booleano: false,
     preco: 23.24,
-    capa: '/public/97819821858242(1).png',
+    capa: '/97819821858242(1).png',
     quantidade: 1,
     favoritar: false,
   },
@@ -28,7 +28,7 @@ const produtos = ref([
     autor: 'Cassandra Clare',
     booleano: false,
     preco: 13.94,
-    capa: '/public/97819821858242(2).png',
+    capa: '/97819821858242(2).png',
     quantidade: 1,
     favoritar: false,
   },
@@ -38,7 +38,7 @@ const produtos = ref([
     autor: 'Cassandra Clare',
     booleano: false,
     preco: 16.84,
-    capa: '/public/97819821858242(3).png',
+    capa: '/97819821858242(3).png',
     quantidade: 1,
     favoritar: false,
   },
@@ -48,7 +48,7 @@ const produtos = ref([
     autor: 'Colson Whitehead',
     booleano: false,
     preco: 26.92,
-    capa: '/public/97819821858242(4).png',
+    capa: '/97819821858242(4).png',
     quantidade: 1,
     favoritar: false,
   },
@@ -58,7 +58,7 @@ const produtos = ref([
     autor: 'Velma Wallis',
     booleano: false,
     preco: 13.95,
-    capa: '/public/97819821858242(5).png',
+    capa: '/97819821858242(5).png',
     quantidade: 1,
     favoritar: false,
   },
@@ -68,7 +68,7 @@ const produtos = ref([
     autor: 'Taylor Jenkins Reid',
     booleano: false,
     preco: 26.04,
-    capa: '/public/97819821858242(6).png',
+    capa: '/97819821858242(6).png',
     quantidade: 1,
     favoritar: false,
   },
@@ -78,7 +78,7 @@ const produtos = ref([
     autor: 'Emily Henry',
     booleano: false,
     preco: 15.81,
-    capa: '/public/97819821858242(7).png',
+    capa: '/97819821858242(7).png',
     quantidade: 1,
     favoritar: false,
   },
@@ -646,6 +646,10 @@ section.primeira div p:last-child {
   font-size: 20px;
   left: 70vw;
   top: 2.3vw;
+}
+
+.lixeira:hover {
+  cursor: pointer;
 }
 
 .separar {
